@@ -125,7 +125,6 @@
                     error:
                         function (xhr, status, error) {
                             var err = eval("(" + xhr.responseText + ")");
-                            alert(err.Message);
                             $("#output-failure").show();
                             $("#priceGet").hide();
                         }
