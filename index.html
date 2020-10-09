@@ -99,14 +99,14 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
-        const environmentUrl = 'http://localhost:9000';
+        const environmentUrl = 'https://alfa.rentup.pl';
         const fullLocationInfo = window.location.href;
         const sendInfo = {clientProductId: fullLocationInfo};
         $(document).ready(function () {
             $("#priceChecker").click(function () {
                 var jqxhr = $.ajax({
                     type: 'post',
-                    url: 'http://localhost:9000/api/client/prices',
+                    url: 'https://alfa.rentup.pl/api/client/prices',
                     data: JSON.stringify(sendInfo),
                     contentType: "application/json; charset=utf-8",
                     traditional: true,
