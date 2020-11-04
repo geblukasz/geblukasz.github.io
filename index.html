@@ -5,7 +5,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-     
+    var iframe = document.createElement('iframe');
+    var html = '<body>Foo</body>';
+    iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
+    document.body.appendChild(iframe);
+    console.log('iframe.contentWindow =', iframe.contentWindow);
+    alert('created iframe');
   </script>
 <style>
 body {
@@ -18,7 +23,7 @@ body {
 <h1>My Website</h1>
 <p>A website created by me.</p>
 <div>
-    <iframe src="http://localhost:9000/banner-local.html" width="370px" height="370px" frameborder="0" id='rentup-frame'></iframe>
+<!--     <iframe src="http://localhost:9000/banner-local.html" width="370px" height="370px" frameborder="0" id='rentup-frame'></iframe> -->
 </div>
 </body>
 </html>
