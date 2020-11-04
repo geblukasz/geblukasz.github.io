@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-            document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener("DOMContentLoaded", function(){
             const iframe = document.createElement('iframe');
             const fullUrl = window.location.href;
             iframe.src = 'http://localhost:9000/banner-local.html';
@@ -13,7 +13,7 @@
             iframe.height = '370px';
             iframe.frameBorder = '0';
             iframe.name = fullUrl;
-            document.body.appendChild(iframe);
+            document.getElementById('rentup-iframe').appendChild(iframe);
         });
   </script>
 <style>
@@ -27,7 +27,7 @@ body {
 <h1>My Website</h1>
 <p>A website created by me.</p>
 <div>
-<!--     <iframe src="http://localhost:9000/banner-local.html" width="370px" height="370px" frameborder="0" id='rentup-frame'></iframe> -->
+    <div id="rentup-iframe"></div>
 </div>
 </body>
 </html>
