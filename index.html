@@ -13,6 +13,7 @@
             iframe.height = '370px'
             iframe.frameBorder = "0"
             iframe.id = fullUrl;
+            iframe.name = fullUrl;
             document.body.appendChild(iframe);
             console.log('iframe.contentWindow =', iframe.contentWindow);
             alert(fullUrl);
