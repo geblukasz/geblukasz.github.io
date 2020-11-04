@@ -5,14 +5,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-    document.addEventListener("DOMContentLoaded", function(){
-      var iframe = document.createElement('iframe');
-      var html = '<body>Foo</body>';
-      iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
-      document.body.appendChild(iframe);
-      console.log('iframe.contentWindow =', iframe.contentWindow);
-      alert('created iframe');
-    });
+
+            document.addEventListener("DOMContentLoaded", function(){
+            var iframe = document.createElement('iframe');
+            var html = '<body>Foo</body>';
+            var fullUrl = window.location.href;
+            iframe.src = 'http://localhost:9000/banner-local.html';
+            iframe.width = '370px'
+            iframe.height = '370px'
+            iframe.frameBorder = "0"
+            iframe.id = fullUrl;
+            document.body.appendChild(iframe);
+            console.log('iframe.contentWindow =', iframe.contentWindow);
+            alert('created iframe');
+        });
+    
   </script>
 <style>
 body {
