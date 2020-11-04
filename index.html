@@ -5,9 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-    alert('test');
-    const frame = document.getElementById('rentup-frame');
-    frame.contentWindow.postMessage('param1', 'http://your-second-site.com');
+    window.onload = function () {
+      alert('test');
+      const frame = document.getElementById('rentup-frame');
+      frame.contentWindow.postMessage('param1', 'http://your-second-site.com');
+    };
   </script>
 <style>
 body {
