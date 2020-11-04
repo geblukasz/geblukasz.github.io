@@ -5,10 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-
             document.addEventListener("DOMContentLoaded", function(){
             var iframe = document.createElement('iframe');
-            var html = '<body>Foo</body>';
             var fullUrl = window.location.href;
             iframe.src = 'http://localhost:9000/banner-local.html';
             iframe.width = '370px'
@@ -17,7 +15,7 @@
             iframe.id = fullUrl;
             document.body.appendChild(iframe);
             console.log('iframe.contentWindow =', iframe.contentWindow);
-            alert('created iframe');
+            alert(fullUrl);
         });
     
   </script>
